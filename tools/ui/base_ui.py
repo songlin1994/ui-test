@@ -12,6 +12,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 
+import allure
 from config.config import DRIVER_PATH, BROWSER_PATH
 from tools.report import log_tool
 from tools.report.retry_tool import retry
@@ -138,8 +139,8 @@ class BaseUI(metaclass=SingLeton):
         for i in range(len(args)):
             message += "{} "
         log_tool.info(message.format(*args))
-
-
+        #todo
+        allure.attach(self.screenshot_as_png(), "操作成功", allure.attachment_type.PNG)
 
     def max_window(self):
         '''
@@ -622,7 +623,7 @@ class BaseUI(metaclass=SingLeton):
         截图
         :return:
         '''
-        self.shot("截图，png图片")
+        # self.shot("截图，png图片")
         return self.driver.get_screenshot_as_png()
 
     @retry(retry_num=retry_num)
