@@ -1,7 +1,6 @@
 # coding=utf-8
 import os
 
-import autoit
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
@@ -485,22 +484,22 @@ class BaseUI(metaclass=SingLeton):
             print("修改属性值失败，属性名:" + attribute_name)
             raise
 
-    @retry(retry_num=retry_num)
-    def file_upload(self,locator,file_path):
-        '''
-        点击上传文件按钮并上传文件
-        :param locator: 定位语句 例如：xpath=>//*[@id='kw']
-        :param file_path: 文件路径
-        :return:
-        '''
-        self.click(locator)
-        autoit.win_wait("打开", 10)
-        self.sleep(1)
-        file_path = os.path.abspath(file_path)
-        self.shot("上传文件",file_path)
-        # autoit.control_send("打开", "Edit1", os.path.abspath(file_path))
-        autoit.control_set_text("打开", "Edit1", file_path)
-        autoit.control_click("打开", "Button1")
+    # @retry(retry_num=retry_num)
+    # def file_upload(self,locator,file_path):
+    #     '''
+    #     点击上传文件按钮并上传文件
+    #     :param locator: 定位语句 例如：xpath=>//*[@id='kw']
+    #     :param file_path: 文件路径
+    #     :return:
+    #     '''
+    #     self.click(locator)
+    #     autoit.win_wait("打开", 10)
+    #     self.sleep(1)
+    #     file_path = os.path.abspath(file_path)
+    #     self.shot("上传文件",file_path)
+    #     # autoit.control_send("打开", "Edit1", os.path.abspath(file_path))
+    #     autoit.control_set_text("打开", "Edit1", file_path)
+    #     autoit.control_click("打开", "Button1")
 
     @retry(retry_num=retry_num)
     def get_alert_text(self):
