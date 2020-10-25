@@ -140,7 +140,7 @@ class BaseUI(metaclass=SingLeton):
             message += "{} "
         log_tool.info(message.format(*args))
         #todo
-        allure.attach(self.screenshot_as_png(), "操作成功", allure.attachment_type.PNG)
+        allure.attach(self.screenshot_as_png(), message+"操作成功", allure.attachment_type.PNG)
 
     def max_window(self):
         '''
