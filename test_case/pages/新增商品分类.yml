@@ -1,0 +1,19 @@
+分类名称输入框 : //label[contains(text(),'分类名称')]/../div//input
+上级分类下拉框 : //label[contains(text(),'上级分类')]/../div//input
+上级分类下拉选项 : //ul[@class="el-scrollbar__view el-select-dropdown__list"]//span[text()='{}']
+数量单位输入框 : //label[contains(text(),'数量单位')]/../div//input
+排序输入框 : //label[contains(text(),'排序')]/../div//input
+是否显示单选框 : //label[contains(text(),"是否显示：")]/../div//span[contains(text(),"{}")]/..//input/..
+是否显示在导航栏单选框 : //label[contains(text(),"是否显示在导航栏")]/../div//span[contains(text(),"{}")]/..//input/..
+分类图标文件上传框 : //label[contains(text(),'分类图标')]/../div//span[text()='点击上传']
+筛选属性下拉框 : (//label[contains(text(),'筛选属性')]/../div//input)[{}]
+一级属性选项 : (//ul[contains(@id,'cascader-menu')])[{}]/li[contains(text(),'{}')]
+二级属性选项 : (//ul[starts-with(@id,'menu-')])[{}]/li[contains(text(),'{}')]
+删除按钮 : (//span[text()='删除'])[{}]
+新增按钮 : //span[text()='新增']
+关键词输入框 : //label[contains(text(),'关键词')]/../div//input
+分类描述输入框 : //label[contains(text(),'分类描述')]/../div//textarea
+提交按钮 : //span[text()='提交']
+重置按钮 : //span[text()='重置']
+确认提示 : //span[contains(text(),'{}')]
+操作结果提示框 : //p[@class="el-message__content"]

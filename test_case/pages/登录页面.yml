@@ -1,0 +1,4 @@
+用户名输入框 : xpath=>//input[@placeholder="请输入用户名"]
+密码输入框 : xpath=>//input[@placeholder="请输入密码"]
+登录按钮 : xpath=>//span[contains(text(),"登录")]/..
+
