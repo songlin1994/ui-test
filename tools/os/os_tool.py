@@ -1,5 +1,4 @@
 # -*- coding:utf-8 -*-
-# Author : 小吴老师
 # Data ：2019/7/11 18:31
 import os
 import shutil

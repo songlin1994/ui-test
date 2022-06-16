@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*- 
-# Project: guoya-tools-demo
-# Creator: LudvikWoo
+# -*- coding: utf-8 -*-
 # Create time: 2019-09-18 00:26
 import smtplib
 from email.mime.text import MIMEText

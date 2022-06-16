@@ -1,5 +1,4 @@
 # -*- coding:utf-8 -*-
-# Author : xuepl
 # Data ：2019/7/31 8:26
 
 # 字典转字符串
